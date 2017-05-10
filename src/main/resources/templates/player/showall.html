@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zawodnicy</title>
+</head>
+<body>
+
+<h1>Zawodnicy w bazie danych</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Age</th>
+            <th>Position</th>
+            <th>Club</th>
+        </tr>
+
+        <tr th:each="player : ${players}">
+            <th th:text="${player.name}"/>
+            <th th:text="${player.surname}"/>
+            <th th:text="${player.age}"/>
+            <th th:text="${player.position}"/>
+            <th th:text="${player.club}"/>
+        </tr>
+    </table>
+
+
+    <form method="get" action="/player/add">
+        <p><button type="submit">Dodaj nowa osobe </button></p>
+    </form>
+
+    <form method="get" action="/player/searchbyname">
+        <p><button type="submit">Szukaj po imieniu </button></p>
+    </form>
+
+    <form method="get" action="/player/searchbyposition">
+        <p><button type="submit">Szukaj po pozycji </button></p>
+    </form>
+
+
+</body>
+</html>

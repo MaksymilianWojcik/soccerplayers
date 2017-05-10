@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Szukaj zawodnika</title>
+</head>
+<body>
+
+<h1>Znajdz zawodnika po imieniu</h1>
+
+<form th:action="@{/player/result}" method="post">
+    <label>Szukaj po imieniu</label>
+        <p><input type="text" th:field="${player.name}"/></p>
+        <p><input type="submit" value="Znajdz"/></p>
+</form>
+
+</body>
+</html>

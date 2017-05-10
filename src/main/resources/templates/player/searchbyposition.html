@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Znajdz zawodnika po pozycji</h1>
+
+<form th:action="@{/player/resultbyposition}" method="post">
+    <label>Szukaj po pozycji</label>
+    <p><input type="text" th:field="${player.position}"/></p>
+    <p><input type="submit" value="Znajdz"/></p>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj zawodnika</title>
+</head>
+<body>
+    <form th:action="@{/player/create}" method="post">
+        <label>Imie</label>
+            <p><input type="text" th:field="${player.name}"/></p>
+        <label>Nazwisko</label>
+            <p><input type="text" th:field="${player.surname}"/></p>
+        <label>Wiek</label>
+            <p><input type="text" th:field="${player.age}"/></p>
+        <label>Pozycja</label>
+            <p><input type="text" th:field="${player.position}"/></p>
+        <label>Klub</label>
+            <p><input type="text" th:field="${player.club}"/></p>
+        <p><input type="submit" value="Dodaj"/></p>
+    </form>
+
+    <form method="get" action="/player/showall">
+        <p><button type="submit">Pokaz zawodnikow</button></p>
+    </form>
+
+</body>
+</html>
