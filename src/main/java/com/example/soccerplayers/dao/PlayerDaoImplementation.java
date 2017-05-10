@@ -26,6 +26,8 @@ public class PlayerDaoImplementation implements PlayerDao {
         entityManager.persist(player);
     }
 
+
+
     @Override
     @Transactional
     public List<Player> showAll() {
@@ -44,6 +46,7 @@ public class PlayerDaoImplementation implements PlayerDao {
     @Transactional
     public List<Player> findByPosition(String position) {
         Query query = entityManager.createQuery("Select p From Player p WHERE p.position='"+position+"'");
+
         return query.getResultList();
     }
 }

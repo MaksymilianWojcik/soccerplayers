@@ -9,6 +9,7 @@ import java.util.List;
  */
 public interface PlayerDao {
     void save(Player player);
+
     List<Player> showAll();
     List<Player> findByName(String name);
     List<Player> findByPosition(String positioon);
